@@ -1,0 +1,10 @@
+name: test-github-pages
+runtime: yaml
+description: Example of deploying React with Pulumi
+resources:
+  web:
+    type: "aws-static-website:index:Website"
+    properties:
+      sitePath: "../my-website/build"
+outputs:
+  websiteURL: ${web.websiteURL}
